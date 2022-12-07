@@ -52,7 +52,7 @@ export const AddTickerForm: FC<Props> = ({
     <div className='flex flex-col justify-center items-center'>
         <form 
             onSubmit={(e) => handleInputClick(e)} 
-            className="flex flex-col space-y-4 items-center w-full max-w-xl">   
+            className="flex flex-col items-center w-full max-w-xl">   
             <label htmlFor ="add-stock" className="sr-only">Add stock</label>
             <div className="relative flex flex-row justify-center h-full w-full space-x-2">
                 <div className='flex w-full'>
@@ -93,6 +93,9 @@ export const AddTickerForm: FC<Props> = ({
                   }
 
                 </div>
+            </div>
+            <div className='text-gray-400 text-sm mt-1'>
+              (Search for corresponding tickers on <a href='https://finance.yahoo.com' className='text-muiblue' target="_blank">https://finance.yahoo.com</a>)
             </div>
         </form>
       {error && (<span className='font-semibold text-xl text-red-600 hover:text-red-700 focus:text-red-700 transition duration-200 ease-in-out'>{error.code}: {error.description}<br /></span>)}
