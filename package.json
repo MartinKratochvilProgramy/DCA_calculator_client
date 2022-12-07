@@ -1,0 +1,35 @@
+{
+  "name": "client",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/lab": "^5.0.0-alpha.110",
+    "@mui/material": "^5.10.16",
+    "@mui/x-date-pickers": "^5.0.9",
+    "dayjs": "^1.11.6",
+    "plotly.js": "^2.16.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-plotly.js": "^2.6.0"
+  },
+  "devDependencies": {
+    "@types/plotly.js": "^2.12.9",
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "@types/react-plotly.js": "^2.5.2",
+    "@vitejs/plugin-react": "^2.2.0",
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.19",
+    "tailwindcss": "^3.2.4",
+    "typescript": "^4.6.4",
+    "vite": "^3.2.3"
+  }
+}

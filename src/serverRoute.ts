@@ -1,0 +1,1 @@
+export const serverRoute = "//localhost:3000";
