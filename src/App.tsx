@@ -14,7 +14,7 @@ function App() {
   const [data, setData] = useState<TickerDataInterface[]>([]);
   const [waitingForData, setWaitingForData] = useState<boolean>(false);
   const [startDate, setStartDate] = useState<Dayjs | null>(null);
-  const [startAmount, setStartAmount] = useState<number | null>(null);
+  const [startAmount, setStartAmount] = useState<number>(1);
   const [incrementAmount, setIncrementAmount] = useState<number | null>(null);
   const [investmentPeriod, setInvestmentPeriod] = useState<string>("Monthly");
 
@@ -53,7 +53,7 @@ function App() {
       setData(res);
       setWaitingForData(false);
 
-      setTickers(getTotalRelativeChange(res));
+      setTickers(getTotalRelativeChange(res, startAmount));
     })
     .catch((error) => {
       console.log(error.message)
