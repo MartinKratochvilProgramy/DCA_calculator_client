@@ -49,7 +49,7 @@ export const TickersSelect: FC<Props> = ({
           {tickers.map(item => {
             let itemRelativeChange = "";
             if (item.relativeChange !== null) {
-              itemRelativeChange =  ((item.relativeChange) * 100).toFixed(1) + "%"
+              itemRelativeChange =  (item.relativeChange).toFixed(1) + "%"
               if (item.relativeChange > 1) {
                 itemRelativeChange = "+" + itemRelativeChange;
               }

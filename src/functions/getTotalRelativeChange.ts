@@ -17,9 +17,8 @@ export function getTotalRelativeChange(
     
     for (const data of allData) {
         if (data.ticker !== "No investment") {
-            const relativeChange = Number((data.values[data.values.length - 1] / noInvestmentRelChange));
-            console.log(relativeChange);
-            
+            // length - 2 because the graph does not show the last value???
+            const relativeChange = Number((data.values[data.values.length - 2] / noInvestmentRelChange) * 100 - 100);
             chipData.push({ticker: data.ticker, relativeChange: relativeChange})
         }
     }

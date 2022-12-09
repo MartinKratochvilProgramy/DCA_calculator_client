@@ -78,7 +78,6 @@ export const SelectRangesForm: FC<|Props>  = ({
                             >
                                 <MenuItem value={"Weekly"}>Weekly</MenuItem>
                                 <MenuItem value={"Monthly"}>Monthly</MenuItem>
-                                <MenuItem value={"Yearly"}>Yearly</MenuItem>
                             </Select>
                         </FormControl>
                     </div>
