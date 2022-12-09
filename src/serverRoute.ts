@@ -1,4 +1,4 @@
-export const serverRoute = "//localhost:4001";
+export const serverRoute = "https://dca-calculator.onrender.com";
 
 // //localhost:3000
 // https://dca-calculator.onrender.com
