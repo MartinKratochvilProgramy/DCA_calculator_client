@@ -48,7 +48,7 @@ export const SelectRangesForm: FC<|Props>  = ({
     <div className='flex justify-center items-center w-full'>
         <form 
             onSubmit={(e) => {handleSubmit(e)}}
-            className='flex justify-center items-center flex-col p-4 rounded w-full'>
+            className='flex justify-center items-center flex-col p-1 xs:p-4 rounded w-full'>
             <div className='flex flex-col mb-4 space-y-4'>
                 <TextField 
                     id="standard-basic" 
