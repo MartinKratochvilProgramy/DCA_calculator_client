@@ -37,7 +37,7 @@ export const TickersSelect: FC<Props> = ({
   return (
       <div className="md:px-12 px-2 pt-1 lg:w-6/12 md:w-8/12 w-10/12 mb-0">
 
-        <h1 className='text-3xl font-semibold text-center mt-8 mb-4 pb-4 md:py-4 text-muiblue'>
+        <h1 className='text-3xl font-semibold text-center mt-4 mb-4 pb-4 md:py-4 text-muiblue'>
           DCA CALCULATOR
         </h1>
 
