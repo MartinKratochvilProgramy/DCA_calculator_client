@@ -1,4 +1,4 @@
-import React, { useState, useEffect, FC } from 'react'
+import React, { useState, useEffect, ReactElement } from 'react'
 import { TickersSelect } from './components/TickersSelect'
 import { Plots } from './components/Plots'
 import { serverRoute } from './serverRoute'
@@ -7,7 +7,7 @@ import { TickerChipInterface } from './types/TickerChipInterface'
 import { TickerDataInterface } from './types/TickerDataInterface'
 import { getTotalRelativeChange } from './functions/getTotalRelativeChange'
 
-export const App: FC = () => {
+export default function App (): ReactElement {
   const [tickers, setTickers] = useState<TickerChipInterface[]>([])
   const [data, setData] = useState<TickerDataInterface[]>([])
   const [waitingForData, setWaitingForData] = useState<boolean>(false)
