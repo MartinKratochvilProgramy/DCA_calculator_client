@@ -1,10 +1,10 @@
-import { FC } from 'react';
-import { AddTickerForm } from './AddTickerForm';
-import Chip from '@mui/material/Chip';
-import { SelectRangesForm } from '../components/SelectRangesForm';
-import { Dayjs } from 'dayjs';
+import React, { FC } from 'react'
+import { AddTickerForm } from './AddTickerForm'
+import Chip from '@mui/material/Chip'
+import { SelectRangesForm } from '../components/SelectRangesForm'
+import { Dayjs } from 'dayjs'
 
-import { TickerChipInterface } from '../types/TickerChipInterface';
+import { TickerChipInterface } from '../types/TickerChipInterface'
 
 interface Props {
   tickers: TickerChipInterface[];
@@ -33,7 +33,6 @@ export const TickersSelect: FC<Props> = ({
   investmentPeriod,
   setInvestmentPeriod
 }) => {
-
   return (
     <div className="md:px-12 px-2 pt-1 lg:w-6/12 md:w-8/12 w-10/12 mb-0">
 
@@ -55,11 +54,9 @@ export const TickersSelect: FC<Props> = ({
             }
           }
           return (
-            <div
-              className='mt-1'
-              key={item.ticker}
-            >
+            <div className='mt-1'>
               <Chip
+                key={item.ticker}
                 label={item.ticker + " " + itemRelativeChange}
                 color="primary"
                 variant="outlined"

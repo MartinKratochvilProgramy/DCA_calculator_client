@@ -3,20 +3,20 @@ import { FC } from 'react'
 import Plot from 'react-plotly.js';
 
 interface TickerData {
-    ticker: string;
-    dates: string[];
-    values: number[];
+    ticker: string
+    dates: string[]
+    values: number[]
 }
 
 interface SeriesData {
-    x: string[];
-    y: number[];
-    mode: string;
+    x: string[]
+    y: number[]
+    mode: string
     name: string
 }
 
 interface Props {
-    data: TickerData[];
+    data: TickerData[]
 }
 
 export const Plots: FC<Props> = ({
@@ -53,8 +53,7 @@ export const Plots: FC<Props> = ({
             x: ticker.dates,
             y: ticker.values,
             mode: 'lines',
-            name: ticker.ticker,
-            line: { shape: 'spline' },
+            name: ticker.ticker
         }
 
         return seriesData;
