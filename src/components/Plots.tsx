@@ -53,7 +53,8 @@ export const Plots: FC<Props> = ({
             x: ticker.dates,
             y: ticker.values,
             mode: 'lines',
-            name: ticker.ticker
+            name: ticker.ticker,
+            line: { shape: 'spline' },
         }
 
         return seriesData;
