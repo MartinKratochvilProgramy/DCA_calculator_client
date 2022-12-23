@@ -65,7 +65,7 @@ export const Plots: FC<Props> = ({
     }
 
     return (
-        <div className='flex flex-col justify-center items-center w-full'>
+        <div className='flex flex-col justify-center items-center w-full mb-0 md:mb-10'>
             <div className='flex justify-center items-center w-full min-h-[260px] md:min-h-[450px]'>
                 <Plot
                     layout={allSeriesLayout}

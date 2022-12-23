@@ -54,9 +54,11 @@ export const TickersSelect: FC<Props> = ({
             }
           }
           return (
-            <div className='mt-1'>
+            <div
+              className='mt-1'
+              key={item.ticker}
+            >
               <Chip
-                key={item.ticker}
                 label={item.ticker + " " + itemRelativeChange}
                 color="primary"
                 variant="outlined"
