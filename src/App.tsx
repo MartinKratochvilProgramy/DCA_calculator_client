@@ -48,26 +48,28 @@ function App() {
         investmentPeriod: investmentPeriod
       })
     })
-    .then((response ) => response.json())
-    .then((res: TickerDataInterface[]) => {
-      setData(res);
-      setWaitingForData(false);
+      .then((response) => response.json())
+      .then((res: TickerDataInterface[]) => {
+        console.log(res);
 
-      setTickers(getTotalRelativeChange(res, startAmount));
-    })
-    .catch((error) => {
-      console.log(error.message)
-    })
-    
+        setData(res);
+        setWaitingForData(false);
+
+        setTickers(getTotalRelativeChange(res, startAmount));
+      })
+      .catch((error) => {
+        console.log(error.message)
+      })
+
   }
 
   function addTicker(newTicker: string): void {
-    if (tickers.filter((item) => {return item.ticker === newTicker}).length === 0) {
+    if (tickers.filter((item) => { return item.ticker === newTicker }).length === 0) {
       // if not ticker already in ticker
-      setTickers([...tickers, {ticker: newTicker, relativeChange: null}]);
+      setTickers([...tickers, { ticker: newTicker, relativeChange: null }]);
     }
   }
-  
+
   function deleteTicker(tickerName: string): void {
     const newTickers = tickers.filter((item) => {
       return item.ticker != tickerName;
@@ -82,12 +84,12 @@ function App() {
 
   return (
     <div className="flex flex-col justify-start items-center bg-neutral-50 w-full h-full">
-      <TickersSelect 
+      <TickersSelect
         tickers={tickers}
         waitingForData={waitingForData}
         inputComplete={inputComplete}
-        addTicker={addTicker}  
-        deleteTicker={deleteTicker}  
+        addTicker={addTicker}
+        deleteTicker={deleteTicker}
         modifyStartDate={modifyStartDate}
         setStartAmount={setStartAmount}
         setIncrementAmount={setIncrementAmount}
