@@ -7,17 +7,17 @@ import { Dayjs } from 'dayjs'
 import { TickerChipInterface } from '../types/TickerChipInterface'
 
 interface Props {
-  tickers: TickerChipInterface[];
-  waitingForData: boolean;
-  inputComplete: boolean;
-  addTicker: (ticker: string) => void;
-  deleteTicker: (ticker: string) => void;
-  modifyStartDate: (startDate: Dayjs) => void;
-  setStartAmount: (startAmount: number) => void;
-  setIncrementAmount: (incrementAmount: number) => void;
-  getData: () => void;
-  investmentPeriod: string;
-  setInvestmentPeriod: (investmentPeriod: string) => void;
+  tickers: TickerChipInterface[]
+  waitingForData: boolean
+  inputComplete: boolean
+  addTicker: (ticker: string) => void
+  deleteTicker: (ticker: string) => void
+  modifyStartDate: (startDate: Dayjs) => void
+  setStartAmount: (startAmount: number) => void
+  setIncrementAmount: (incrementAmount: number) => void
+  getData: () => void
+  investmentPeriod: string
+  setInvestmentPeriod: (investmentPeriod: string) => void
 }
 
 export const TickersSelect: FC<Props> = ({
@@ -46,11 +46,11 @@ export const TickersSelect: FC<Props> = ({
 
       <div className="flex justify-center flex-wrap my-2 space-x-1">
         {tickers.map(item => {
-          let itemRelativeChange = "";
+          let itemRelativeChange = ''
           if (item.relativeChange !== null) {
-            itemRelativeChange = (item.relativeChange).toFixed(1) + "%"
+            itemRelativeChange = (item.relativeChange).toFixed(1) + '%'
             if (item.relativeChange > 1) {
-              itemRelativeChange = "+" + itemRelativeChange;
+              itemRelativeChange = '+' + itemRelativeChange
             }
           }
           return (
@@ -59,7 +59,7 @@ export const TickersSelect: FC<Props> = ({
               key={item.ticker}
             >
               <Chip
-                label={item.ticker + " " + itemRelativeChange}
+                label={item.ticker + ' ' + itemRelativeChange}
                 color="primary"
                 variant="outlined"
                 onDelete={() => deleteTicker(item.ticker)}
@@ -68,7 +68,6 @@ export const TickersSelect: FC<Props> = ({
           )
         })}
       </div>
-
 
       <SelectRangesForm
         waitingForData={waitingForData}
