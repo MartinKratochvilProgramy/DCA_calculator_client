@@ -7,7 +7,7 @@ import { TickerChipInterface } from './types/TickerChipInterface'
 import { TickerDataInterface } from './types/TickerDataInterface'
 import { getTotalRelativeChange } from './functions/getTotalRelativeChange'
 
-export default function App(): ReactElement {
+export default function App (): ReactElement {
   const [tickers, setTickers] = useState<TickerChipInterface[]>([])
   const [data, setData] = useState<TickerDataInterface[]>([])
   const [waitingForData, setWaitingForData] = useState<boolean>(false)
@@ -24,7 +24,7 @@ export default function App(): ReactElement {
     }
   }, [startAmount, incrementAmount, tickers, startDate])
 
-  function getData(): void {
+  function getData (): void {
     setWaitingForData(true)
 
     const tickerNames = []
@@ -57,14 +57,14 @@ export default function App(): ReactElement {
       })
   }
 
-  function addTicker(newTicker: string): void {
+  function addTicker (newTicker: string): void {
     if (tickers.filter((item) => { return item.ticker === newTicker }).length === 0) {
       // if not ticker already in ticker
       setTickers([...tickers, { ticker: newTicker, relativeChange: null }])
     }
   }
 
-  function deleteTicker(tickerName: string): void {
+  function deleteTicker (tickerName: string): void {
     const newTickers = tickers.filter((item) => {
       return item.ticker !== tickerName
     })
@@ -72,7 +72,7 @@ export default function App(): ReactElement {
     setTickers([...newTickers])
   }
 
-  function modifyStartDate(startDate: Dayjs): void {
+  function modifyStartDate (startDate: Dayjs): void {
     setStartDate(startDate)
   }
 
