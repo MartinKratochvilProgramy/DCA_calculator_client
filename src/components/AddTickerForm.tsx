@@ -57,22 +57,20 @@ export const AddTickerForm: FC<Props> = ({
             className="flex flex-col items-center w-full max-w-xl">
             <label htmlFor ="add-stock" className="sr-only">Add stock</label>
             <div className="relative flex flex-row justify-center h-full w-full space-x-2">
-                <div className='flex w-full'>
-                    <label htmlFor ="add-stock" className="sr-only">Ticker input</label>
-                    <input
-                    type="text"
-                    id="ticker-input"
-                    className="bg-gray-100 border w-full border-gray-300 text-gray-900 text-sm focus:outline-none block pl-4 p-2.5 rounded"
-                    placeholder="Ticker ('AAPL', 'MSFT', ... )"
-                    autoFocus
-                    onChange={(e) => {
-                      setTickerInput(e.target.value)
-                      setError(null)
-                    }}
-                    value={tickerInput}
-                    />
+              <label htmlFor ="add-stock" className="sr-only">Ticker input</label>
+              <input
+                type="text"
+                id="ticker-input"
+                className="bg-gray-100 w-full border max-w-[256px] border-gray-300 text-gray-900 text-sm focus:outline-none block pl-4 p-2.5 rounded"
+                placeholder="Ticker ('AAPL', 'MSFT', ... )"
+                autoFocus
+                onChange={(e) => {
+                  setTickerInput(e.target.value)
+                  setError(null)
+                }}
+                value={tickerInput}
+              />
 
-                </div>
                 <div className="w-4/12 lg:w-3/12 flex">
                   {waitingForValidation
                     ? <LoadingButton
